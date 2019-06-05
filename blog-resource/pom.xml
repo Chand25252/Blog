@@ -24,6 +24,13 @@
 		</dependency>
 	</dependencies>
 
+	<properties>
+		<jarName>${project.artifactId}</jarName>
+		<classpathPrefix>lib/</classpathPrefix>
+		<mainClass>com.chand.blog.resource.ResourceApplication</mainClass>
+		<outputDir>target</outputDir>
+	</properties>
+
 	<build>
 		<plugins>
 			<plugin>

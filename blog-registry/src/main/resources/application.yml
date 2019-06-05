@@ -1,0 +1,28 @@
+server:
+  #应用端口号
+  port: 8671
+spring:
+  application:
+    #应用名称
+    name: blog-registry
+  security:
+    #登录账号和密码
+    user:
+      name: Chand
+      password: 123456
+
+registry-center:
+  ip: 127.0.0.1
+
+eureka:
+  client:
+    #是否将自己注册到Eureka Server 默认为true
+    register-with-eureka: false
+    #是否从Eureka Server 获取注册信息，默认为true
+    fetch-registry: false
+    service-url:
+      #与Eureka server 交互的地址，查询服务和注册服务都需要这个地址，多个地址使用“，”分割
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${registry-center.ip}:${server.port}/eureka/
+  server:
+    #禁用自我保护模式
+    enable-self-preservation: false
