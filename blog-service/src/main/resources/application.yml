@@ -1,0 +1,22 @@
+server:
+  #应用端口号
+  port: 8675
+spring:
+  application:
+    #应用名称
+    name: blog-service
+
+registry-center:
+  ip: 127.0.0.1
+  port: 8671
+  name: Chand
+  password: 123456
+
+eureka:
+  client:
+    service-url:
+      #与Eureka server 交互的地址，查询服务和注册服务都需要这个地址，多个地址使用“，”分割
+      defaultZone: http://${registry-center.name}:${registry-center.password}@${registry-center.ip}:${registry-center.port}/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
