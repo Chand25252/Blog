@@ -9,14 +9,18 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>blog-service</artifactId>
-    <name>blog-service</name>
+    <artifactId>blog-business</artifactId>
+    <name>blog-business</name>
     <description>业务中心</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -27,7 +31,7 @@
     <properties>
         <jarName>${project.artifactId}</jarName>
         <classpathPrefix>lib/</classpathPrefix>
-        <mainClass>com.chand.blog.service.ServiceApplication</mainClass>
+        <mainClass>com.chand.blog.business.BusinessApplication</mainClass>
         <outputDir>target</outputDir>
     </properties>
 

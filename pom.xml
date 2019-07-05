@@ -17,14 +17,14 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Dalston.RELEASE</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
     </properties>
 
     <modules>
         <module>blog-registry</module>
         <module>blog-resource</module>
         <module>blog-manage</module>
-        <module>blog-service</module>
+        <module>blog-business</module>
     </modules>
 
     <dependencyManagement>
